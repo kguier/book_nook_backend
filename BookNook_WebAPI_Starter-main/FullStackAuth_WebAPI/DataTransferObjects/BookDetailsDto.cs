@@ -12,6 +12,10 @@ namespace FullStackAuth_WebAPI.DataTransferObjects
 
         public ICollection<ReviewWithUserDto> Reviews { get; set; }
 
+        public double Ratings { get; set; }
+
+        public Boolean IsFavorite { get; set; }
+
 
     }
 }
