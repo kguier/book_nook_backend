@@ -8,7 +8,7 @@ using System.Security.Claims;
 
 namespace FullStackAuth_WebAPI.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/Reviews")]
     [ApiController]
     public class ReviewsController : ControllerBase
     {
@@ -24,10 +24,17 @@ namespace FullStackAuth_WebAPI.Controllers
         [HttpPost, Authorize]
         public IActionResult Post([FromBody] Review review)
         {
+            string userId = User.FindFirstValue("id");
 
+            // If the user ID is null or empty, the user is not authenticated, so return a 401 unauthorized response
+            if (string.IsNullOrEmpty(userId))
+            {
+                return Unauthorized();
+            }
+           
+            /*User loggedInUser = _context.Users.Find(userId);*/
             _context.Reviews.Add(review);
-            var userId = User.FindFirstValue("id");
-            User loggedInUser = _context.Users.Find(userId);
+            _context.SaveChanges();
             return StatusCode(201, review);
         }
 

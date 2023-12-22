@@ -10,9 +10,9 @@ namespace FullStackAuth_WebAPI.DataTransferObjects
 
         public string Title { get; set; }
 
-        public ICollection<ReviewWithUserDto> Reviews { get; set; }
+        public List<ReviewWithUserDto> Reviews { get; set; }
 
-        public double Ratings { get; set; }
+        public double AverageRating { get; set; }
 
         public Boolean IsFavorite { get; set; }
 
