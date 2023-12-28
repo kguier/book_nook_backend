@@ -26,13 +26,12 @@ namespace FullStackAuth_WebAPI.Controllers
         {
             string userId = User.FindFirstValue("id");
 
-            // If the user ID is null or empty, the user is not authenticated, so return a 401 unauthorized response
             if (string.IsNullOrEmpty(userId))
             {
                 return Unauthorized();
             }
-           
-            /*User loggedInUser = _context.Users.Find(userId);*/
+
+            review.UserId = userId;
             _context.Reviews.Add(review);
             _context.SaveChanges();
             return StatusCode(201, review);

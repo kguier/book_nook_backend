@@ -38,11 +38,20 @@ namespace FullStackAuth_WebAPI.Controllers
 
         
 
-        // POST api/<FavoritesController>
+        // POST api/Favorites
         [HttpPost, Authorize]
-        public void Post([FromBody] Favorite favorite)
+        public IActionResult Post([FromBody] Favorite favorite)
         {
-            /*return StatusCode(201);*/
+            string userId = User.FindFirstValue("id");
+
+            if (string.IsNullOrEmpty(userId))
+            {
+                return Unauthorized();
+            }
+
+            _context.Favorites.Add(favorite);
+            _context.SaveChanges();
+            return StatusCode(201);
         }
 
         

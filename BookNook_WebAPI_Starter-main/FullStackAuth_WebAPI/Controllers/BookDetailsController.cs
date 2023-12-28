@@ -19,12 +19,6 @@ namespace FullStackAuth_WebAPI.Controllers
         {
             _context = context;
         }
-        // GET: api/<BookDetailsController>
-        [HttpGet]
-        public IEnumerable<string> Get()
-        {
-            return new string[] { "value1", "value2" };
-        }
 
         // GET api/BookDetails/5
         [HttpGet("{id}")]
@@ -32,7 +26,12 @@ namespace FullStackAuth_WebAPI.Controllers
         {
             try
             {
-                var book = _context.bookId.Find(id);
+                /*var book = _context.Find(bookId);*/
+            }
+            catch (Exception ex)
+            {
+                // If an error occurs, return a 500 internal server error with the error message
+                return StatusCode(500, ex.Message);
             }
             return StatusCode(200);
         }
