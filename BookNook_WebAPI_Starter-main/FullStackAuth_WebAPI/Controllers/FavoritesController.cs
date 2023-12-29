@@ -49,6 +49,7 @@ namespace FullStackAuth_WebAPI.Controllers
                 return Unauthorized();
             }
 
+            favorite.UserId = userId;
             _context.Favorites.Add(favorite);
             _context.SaveChanges();
             return StatusCode(201);
