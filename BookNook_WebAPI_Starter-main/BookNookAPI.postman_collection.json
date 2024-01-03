@@ -77,13 +77,13 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6ImxpbmRhIiwiZW1haWwiOiIxMjNAZ21haWwuY29tIiwiaWQiOiIyMWJjMjM2YS0wZTVhLTQ2MTMtOTNiZS05YzM2N2Y2N2FkMzkiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJVc2VyIiwiZXhwIjoxNzAzMjc1Nzc1LCJpc3MiOiJGdWxsU3RhY2tBdXRoX1dlYkFQSSIsImF1ZCI6Imh0dHBzOi8vbG9jYWxob3N0OjUwMDEifQ.h8fHgwJN2kE45qWhh6EWJgCiW3M3a0YNi_FJa3zd01o",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6ImxpbmRhIiwiZW1haWwiOiIxMjNAZ21haWwuY29tIiwiaWQiOiIyMWJjMjM2YS0wZTVhLTQ2MTMtOTNiZS05YzM2N2Y2N2FkMzkiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJVc2VyIiwiZXhwIjoxNzAzODY0Mzk4LCJpc3MiOiJGdWxsU3RhY2tBdXRoX1dlYkFQSSIsImF1ZCI6Imh0dHBzOi8vbG9jYWxob3N0OjUwMDEifQ.Bg22FZ7QYp_Q65wZAE0FniaJQT0TmSMRgvfiNWb_YK0",
 						"type": "text"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"bookId\": \"y\",\r\n    \"text\": \"y\",\r\n    \"rating\": \"2\"\r\n}",
+					"raw": "{\r\n    \"bookId\": \"8\",\r\n    \"text\": \"okay book\",\r\n    \"rating\": 2\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -112,7 +112,7 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6ImxpbmRhIiwiZW1haWwiOiIxMjNAZ21haWwuY29tIiwiaWQiOiIyMWJjMjM2YS0wZTVhLTQ2MTMtOTNiZS05YzM2N2Y2N2FkMzkiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJVc2VyIiwiZXhwIjoxNzAzMjc1Nzc1LCJpc3MiOiJGdWxsU3RhY2tBdXRoX1dlYkFQSSIsImF1ZCI6Imh0dHBzOi8vbG9jYWxob3N0OjUwMDEifQ.h8fHgwJN2kE45qWhh6EWJgCiW3M3a0YNi_FJa3zd01o",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6ImxpbmRhIiwiZW1haWwiOiIxMjNAZ21haWwuY29tIiwiaWQiOiIyMWJjMjM2YS0wZTVhLTQ2MTMtOTNiZS05YzM2N2Y2N2FkMzkiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJVc2VyIiwiZXhwIjoxNzAzOTQ1MjA4LCJpc3MiOiJGdWxsU3RhY2tBdXRoX1dlYkFQSSIsImF1ZCI6Imh0dHBzOi8vbG9jYWxob3N0OjUwMDEifQ.EuAx6XNXausbLF8E262-ZMOfJLVSFSxgIIidsCjSGZ0",
 						"type": "text"
 					}
 				],
@@ -136,7 +136,22 @@
 			"name": "Post New Favorite",
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6ImxpbmRhIiwiZW1haWwiOiIxMjNAZ21haWwuY29tIiwiaWQiOiIyMWJjMjM2YS0wZTVhLTQ2MTMtOTNiZS05YzM2N2Y2N2FkMzkiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJVc2VyIiwiZXhwIjoxNzAzOTQ1MjA4LCJpc3MiOiJGdWxsU3RhY2tBdXRoX1dlYkFQSSIsImF1ZCI6Imh0dHBzOi8vbG9jYWxob3N0OjUwMDEifQ.EuAx6XNXausbLF8E262-ZMOfJLVSFSxgIIidsCjSGZ0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"bookId\": \"l3tSzQEACAAJ\",\r\n    \"title\": \"The Hobbit\",\r\n    \"thumbnailUrl\":\"http://books.google.com/books/content?id=l3tSzQEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
 					"raw": "https://localhost:5001/api/Favorites/",
 					"protocol": "https",
@@ -155,11 +170,23 @@
 		},
 		{
 			"name": "Get Book Details",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
 			"request": {
 				"method": "GET",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
-					"raw": "https://localhost:5001/api/BookDetails",
+					"raw": "https://localhost:5001/api/BookDetails/1",
 					"protocol": "https",
 					"host": [
 						"localhost"
@@ -167,7 +194,8 @@
 					"port": "5001",
 					"path": [
 						"api",
-						"BookDetails"
+						"BookDetails",
+						"1"
 					]
 				}
 			},

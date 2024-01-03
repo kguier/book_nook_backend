@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using FullStackAuth_WebAPI.Models;
+using System.ComponentModel.DataAnnotations;
 
 namespace FullStackAuth_WebAPI.DataTransferObjects
 {
